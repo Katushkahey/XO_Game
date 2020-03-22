@@ -22,7 +22,6 @@ class GameWindow extends JFrame {
         setBounds(WIN_POS_X, WIN_POS_Y, WIN_WIDTH, WIN_HEIGHT);
         setTitle("XO_Game");
         setVisible(true);
-        setAlwaysOnTop(true);
 
         JPanel jp = new JPanel(new GridLayout(1, 3));
         sw = new SettingsWindow(this);
@@ -68,11 +67,11 @@ class GameWindow extends JFrame {
         });
     }
 
-    public void startGame (int mode, int fieldSize) {
+    void startGame(int mode, int fieldSize) {
         map.startGame(mode, fieldSize);
     }
 
-    public void showResult() {
+    void showResult() {
         resultWindow.setWinner(Logic.winnerName);
         resultWindow.setVisible(true);
     }

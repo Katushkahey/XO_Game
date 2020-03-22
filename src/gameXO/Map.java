@@ -89,13 +89,12 @@ public class Map extends JPanel {
 
     private void drawO (Graphics g, int x, int y) {
         g.setColor(Color.RED);
-        g.drawOval(x*cellWidth + 5, y *cellHeight + 5, cellWidth - 10, cellHeight - 10);
+        g.drawOval(x * cellWidth + 5, y * cellHeight + 5, cellWidth - 10, cellHeight - 10);
     }
 
     private void drawX(Graphics g, int x, int y) {
         g.setColor(Color.BLACK);
-        g.drawLine(x*cellWidth + 5, y *cellHeight + 5, (x+1) * cellWidth - 10, (y + 1) * cellHeight -10);
-        g.drawLine((x+1) * cellWidth - 10, y * cellHeight + 5, x * cellWidth + 5, (y + 1) * cellHeight -10);
+        g.drawLine(x * cellWidth + 5, y * cellHeight + 5, (x+1) * cellWidth - 10, (y + 1) * cellHeight - 10);
+        g.drawLine((x+1) * cellWidth - 10, y * cellHeight + 5, x * cellWidth + 5, (y + 1) * cellHeight - 10);
     }
-
 }
